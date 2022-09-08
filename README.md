@@ -2,6 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## To start the server:
+
+Navigate to `server` directory, in terminal:
+
+### `node server.js` to start the server
+
 ## Available Scripts
 
 In the project directory, you can run:
