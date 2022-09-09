@@ -13,6 +13,12 @@ const CreateGame = () => {
 
        let {title,category,maxLevel,imageUrl,summary} = Object.fromEntries(formData)
 
+       if(title == '' || category == '' || maxLevel == '' || imageUrl == '' || summary == ''){
+
+        return alert('All fields are required!')
+        
+       }
+
        gameService.create({
         title,
         category,

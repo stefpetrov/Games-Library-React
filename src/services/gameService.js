@@ -33,21 +33,25 @@ export const create = async (gameData, token) => {
 }
 
 
-// export const update = (petId, petData) => request.put(`${baseUrl}/pets/${petId}`, petData);
 
-// export const getOne = (petId, signal) => {
-//     return fetch(`${baseUrl}/pets/${petId}`, { signal })
-//         .then(res => res.json())
-// };
+export const getOne = (gameId) => {
+    return fetch(`${baseUrl}/games/${gameId}`)
+        .then(res => res.json())
+};
 
-// export const destroy = (petId, token) => {
-//     return fetch(`${baseUrl}/pets/${petId}`, {
-//         method: 'DELETE',
-//         headers: {
-//             'X-Authorization': token
-//         }
-//     }).then(res => res.json());
-// };
+export const update = (gameId, gameData) => request.put(`${baseUrl}/games/${gameId}`, gameData);
+
+export const deleteGame = (gameId, token) =>{
+    return fetch(`${baseUrl}/games/${gameId}`,{
+        method:'DELETE',
+        headers: {
+            'X-Authorization':token
+        }
+    }).then(res => res.json())
+
+}
+
+
 
 // export const like = (petId, pet, token) => {
 //     return fetch(`${baseUrl}/pets/${petId}`, {

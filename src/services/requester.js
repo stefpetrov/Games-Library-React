@@ -30,7 +30,7 @@ async function responseHandler(res) {
 
 function getToken() {
     try {
-        let userItem = localStorage.getItem('user');
+        let userItem = sessionStorage.getItem('user');
 
         if (!userItem) {
             throw {message: 'You must be authenticated'};

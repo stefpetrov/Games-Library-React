@@ -1,6 +1,6 @@
 import { createContext, useContext } from "react";
 
-import useLocalStorage from "../hooks/useLocalStorage";
+import useSessionStorage from "../hooks/useSessionStorage";
 
 const initialAuthState = {
     _id: '',
@@ -14,7 +14,7 @@ export const AuthProvider = ({
     children
 }) => {
 
-    const[user, setUser] = useLocalStorage('user', initialAuthState) 
+    const[user, setUser] = useSessionStorage('user', initialAuthState) 
 
     const login = (authData) => {
         if(authData){

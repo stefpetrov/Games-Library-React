@@ -55,16 +55,10 @@ export const logout = (token) => {
     })
 }
 
-// export const logout = (token) => {
-//     return fetch(`${baseUrl}/users/logout`, {
-//         headers: {
-//             'X-Authorization': token,
-//         }
-//     })
-// };
+
 
 // export const getUser = () => {
-//     let username = localStorage.getItem('username');
+//     let username = sessionStorage.getItem('username');
 
 //     return username;
 // };

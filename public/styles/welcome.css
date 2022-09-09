@@ -83,8 +83,8 @@
     float: left;
     height: 600px;
     color: rgb(204, 144, 131);
-    /* width: 405px; */
-    max-width: max-content;
+    width: 390px;
+    /* max-width: max-content; */
 }
 
 .image-wrap {
