@@ -6,12 +6,19 @@ const CreateGame = () => {
     const navigate = useNavigate()
     const {user} = useAuthContext()
 
-    
     const onGameCreate = (event) => {
         event.preventDefault()
         const formData = new FormData(event.currentTarget)
 
        let {title,category,maxLevel,imageUrl,summary} = Object.fromEntries(formData)
+
+       const gameData = {
+        title,
+        category,
+        maxLevel,
+        imageUrl,
+        summary
+    }
 
        if(title == '' || category == '' || maxLevel == '' || imageUrl == '' || summary == ''){
 
@@ -19,19 +26,12 @@ const CreateGame = () => {
         
        }
 
-       gameService.create({
-        title,
-        category,
-        maxLevel,
-        imageUrl,
-        summary
-       },user.accessToken)
+       gameService.create(gameData,user.accessToken)
             .then(result => {
                 navigate('/home')
             })
 
     }
-
 
 
     return (

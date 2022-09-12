@@ -10,9 +10,28 @@ const EditGame = () => {
 
 
     const onEditSubmitHandler = (event) => {
+        event.preventDefault()
 
         const formData = new FormData(event.currentTarget)
-        const gameData = Object.fromEntries(formData)
+
+        const title = formData.get('title')
+        const category = formData.get('category')
+        const maxLevel = formData.get('maxLevel')
+        const imageUrl = formData.get('imageUrl')
+        const summary = formData.get('summary')
+
+        if(title == '' || category == '' || maxLevel == '' || imageUrl == '' || summary == ''){
+            return alert('All fields are required!')
+            
+        }
+
+        const gameData = {
+            title,
+            category,
+            maxLevel,
+            imageUrl,
+            summary
+        }
 
         gameService.update(gameId,gameData)
 

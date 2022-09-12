@@ -35,14 +35,14 @@ li {
     list-style-position: inside;
 }
 
-button {
+/* button {
     font-weight: bold;
     padding: 0.2em;
     margin: 0.2em;
     border: 1px solid white;
     border-radius: 0.3em;
     background-color: transparent;
-}
+} */
 
 a {
     margin: 0.2em;

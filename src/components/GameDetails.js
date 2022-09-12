@@ -2,6 +2,10 @@ import { useEffect, useState } from "react"
 import { Link, useNavigate, useParams } from "react-router-dom"
 import { useAuthContext } from "../contexts/AuthContext"
 import * as gameService from "../services/gameService"
+import DeleteDialog from "./Common/DeleteDialog"
+
+
+
 
 
 const GameDetails = () => {
@@ -10,6 +14,8 @@ const GameDetails = () => {
     const [game, setGame] = useState({})
     const { user } = useAuthContext()
     const navigate = useNavigate()
+    const [handleDelete, setHandleDelete] = useState(false)
+
 
     const isOwner = Boolean(user._id == game._ownerId)
 
@@ -21,20 +27,37 @@ const GameDetails = () => {
 
     //  Delete functionality
 
-    const onDeleteSubmitHandler = (event) => {
 
-        event.preventDefault()
+    const handleDeleteTrue = () => {
 
         gameService.deleteGame(gameId, user.accessToken)
             .then(result => {
                 navigate('/home')
             })
 
+    }
+
+
+    const onDeleteClickHandler = (event) => {
+        event.preventDefault()
+        setHandleDelete(true)
+
+
+    }
+
+    const handleDeleteFalse = () => {
+        setHandleDelete(false)
+        navigate(`/details/${game._id}`)
 
     }
 
     return (
+
         <section id="game-details">
+             {handleDelete
+                &&
+                < DeleteDialog handleDeleteTrue={handleDeleteTrue} handleDeleteFalse={handleDeleteFalse} />
+            }
             <h1>Game Details</h1>
             <div className="info-section">
 
@@ -65,10 +88,12 @@ const GameDetails = () => {
                     && (
                         <div className="buttons">
                             <Link to={`/edit/${game._id}`} className="button">Edit</Link>
-                            <Link to="#" className="button" onClick={onDeleteSubmitHandler} >Delete</Link>
+                            <Link to="#" className="button" onClick={onDeleteClickHandler} >Delete</Link>
                         </div>
                     )}
+
             </div>
+           
 
             {/* <article className="create-comment">
                 <label>Add new comment:</label>
@@ -79,6 +104,8 @@ const GameDetails = () => {
             </article> */}
 
         </section>
+
+
     )
 }
 
