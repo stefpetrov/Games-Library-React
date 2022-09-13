@@ -1,4 +1,5 @@
 
+import Loader from "../Loader/Loader"
 import GameCard from "./GameCard"
 
 const GameList = ({
@@ -10,10 +11,10 @@ const GameList = ({
         <>
         {games.length > 0
         ? games.map(x => <GameCard key={x._id} game={x}/>)
-        : <p className="no-articles">Loading</p>}
+        : <Loader/>}
 
-        {/* {games.length == 0 
-        && <p className="no-articles">No articles yet!</p>} */}
+        {games.length == 0 
+        && <p className="no-articles">No articles yet!</p>}
         </>
         
     )

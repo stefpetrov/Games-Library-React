@@ -8,9 +8,9 @@ import EditGame from "./components/EditGame";
 import GameDetails from "./components/GameDetails";
 import Header from "./components/Header";
 import HomePage from "./components/Home/HomePage";
-import Login from "./components/Login";
-import Logout from "./components/Logout";
-import Register from "./components/Register";
+import Login from "./components/Authentication/Login";
+import Logout from "./components/Authentication/Logout";
+import Register from "./components/Authentication/Register";
 import { AuthProvider } from "./contexts/AuthContext";
 
 
