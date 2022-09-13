@@ -37,6 +37,7 @@ const GameDetails = () => {
         event.preventDefault()
         setHandleDelete(true)
 
+
     }
 
     const handleDeleteFalse = () => {
@@ -50,46 +51,49 @@ const GameDetails = () => {
         <section id="game-details">
 
             {handleDelete
-                &&
-                < DeleteDialog handleDeleteTrue={handleDeleteTrue} handleDeleteFalse={handleDeleteFalse} />
-            }
-            <h1>Game Details</h1>
-            {!game.hasOwnProperty("title")
-                ? <Loader />
-                : <div className="info-section">
+                ? < DeleteDialog handleDeleteTrue={handleDeleteTrue} handleDeleteFalse={handleDeleteFalse} game={game}/>
+                : <> 
+                <h1>Game Details</h1>
+                    {!game.hasOwnProperty("title")
+                        ? <Loader />
+                        : <div className="info-section">
 
-                    <div className="game-header">
-                        <img className="game-img" src={game.imageUrl} />
-                        <h1>{game.title}</h1>
-                        <span className="levels">MaxLevel: {game.maxLevel}</span>
-                        <p className="type">{game.category}</p>
-                    </div>
-
-                    <p className="text">
-                        {game.summary}
-                    </p>
-
-                    {/* <div className="details-comments">
-                <h2>Comments:</h2>
-                <ul>
-                    <li className="comment">
-                        <p>Content: I rate this one quite highly.</p>
-                    </li>
-                    <li className="comment">
-                        <p>Content: The best game.</p>
-                    </li>
-                </ul>
-                <p className="no-comment">No comments.</p>
-            </div> */}
-                    {isOwner
-                        && (
-                            <div className="buttons">
-                                <Link to={`/edit/${game._id}`} className="button">Edit</Link>
-                                <Link to="#" className="button" onClick={onDeleteClickHandler} >Delete</Link>
+                            <div className="game-header">
+                                <img className="game-img" src={game.imageUrl} />
+                                <h1>{game.title}</h1>
+                                <span className="levels">MaxLevel: {game.maxLevel}</span>
+                                <p className="type">{game.category}</p>
                             </div>
-                        )}
 
-                </div>}
+                            <p className="text">
+                                {game.summary}
+                            </p>
+
+                            {/* <div className="details-comments">
+                    <h2>Comments:</h2>
+                    <ul>
+                        <li className="comment">
+                            <p>Content: I rate this one quite highly.</p>
+                        </li>
+                        <li className="comment">
+                            <p>Content: The best game.</p>
+                        </li>
+                    </ul>
+                    <p className="no-comment">No comments.</p>
+                </div> */}
+                            {isOwner
+                                && (
+                                    <div className="buttons">
+                                        <Link to={`/edit/${game._id}`} className="button">Edit</Link>
+                                        <Link to="#" className="button" onClick={onDeleteClickHandler} >Delete</Link>
+                                    </div>
+                                )}
+
+                        </div>}
+                </>
+
+            }
+
 
             {/* <article className="create-comment">
                 <label>Add new comment:</label>

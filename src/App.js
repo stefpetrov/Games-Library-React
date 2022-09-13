@@ -16,16 +16,6 @@ import { AuthProvider } from "./contexts/AuthContext";
 
 
 
-
-
-
-
-
-
-
-
-
-
 function App() {
   return (
     <AuthProvider>
@@ -45,6 +35,8 @@ function App() {
             <Route path="/catalog" element={<Catalog />} />
             <Route path="/details/:gameId" element={<GameDetails />} />
             <Route path="/edit/:gameId" element={<EditGame />} />
+
+
 
 
           
