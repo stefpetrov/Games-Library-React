@@ -10,7 +10,7 @@ const Header = () => {
 
     let userNavigation = (
         <div id="user">
-            <h5 className="welcome-message">Welcome, {user.email}</h5>
+            <h5 className="welcome-message">Welcome,&nbsp; {user.email}</h5>
             <Link to="/catalog">All games</Link>
             <Link to="/create">Create Game</Link>
             <Link to="/logout">Logout</Link>
@@ -29,7 +29,7 @@ const Header = () => {
 
     return (
         <header>
-            <h1><Link className="home" to="/home">GamesPlay</Link></h1>
+            <h1><Link className="home" to="/home">GamesLib</Link></h1>
             <nav>
                 
                 {isAuthenticated
