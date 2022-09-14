@@ -1,4 +1,5 @@
 import { Link, useNavigate } from "react-router-dom"
+
 import { useAuthContext } from "../../contexts/AuthContext"
 import * as authService from "../../services/authService"
 
@@ -7,15 +8,14 @@ const Login = () => {
     const { login } = useAuthContext()
     const navigate = useNavigate()
 
-
     const onLoginHandler = (event) => {
 
         event.preventDefault()
 
         let formData = new FormData(event.currentTarget)
 
-        const email = formData.get("email")
-        const password = formData.get("password")
+        let email = formData.get("email")
+        let password = formData.get("password")
 
         authService.login(email, password)
             .then(authData => {
@@ -23,15 +23,12 @@ const Login = () => {
                 navigate('/home')
             })
             .catch(err => {
+
                 alert(err)
+
             })
 
-
     }
-
-
-
-
 
     return (
         <section id="login-page" className="auth">

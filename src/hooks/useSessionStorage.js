@@ -1,6 +1,5 @@
 import { useState } from "react"
 
-
 const useSessionStorage = (key, initialValue) => {
 
     const [state, setState] = useState(() => {
@@ -15,9 +14,7 @@ const useSessionStorage = (key, initialValue) => {
         } catch (error) {
             console.log(error)
             return initialValue
-
         }
-
     })
 
     const setItem = (value) => {
@@ -25,17 +22,14 @@ const useSessionStorage = (key, initialValue) => {
         try {
             sessionStorage.setItem(key, JSON.stringify(value))
             setState(value)
-
         } catch (error) {
             console.log(error)
-
         }
     }
     return [
         state,
         setItem
     ]
-
 }
 
 export default useSessionStorage

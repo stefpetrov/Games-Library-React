@@ -2,19 +2,19 @@ const baseUrl = 'http://localhost:3030';
 
 export const login = async (email, password) => {
 
-    let res = await fetch(`${baseUrl}/users/login`,{
+    let res = await fetch(`${baseUrl}/users/login`, {
         method: "POST",
-        headers:{
+        headers: {
             "Content-Type": "application/json"
         },
-        body:JSON.stringify({email, password})
+        body: JSON.stringify({ email, password })
     })
 
     let jsonResult = await res.json()
 
-    if(res.ok){
+    if (res.ok) {
         return jsonResult
-    } else{
+    } else {
         throw jsonResult.message
     }
 }
@@ -31,38 +31,30 @@ export const register = async (email, password) => {
             body: JSON.stringify({ email, password })
         })
         let jsonResult = await response.json()
-    
-        if(response.ok){
+
+        if (response.ok) {
             return jsonResult
-        }else{
+        } else {
             throw jsonResult.message
         }
 
-
-        
     } catch (error) {
         return alert(error)
-        
+
     }
-  
+
 };
 
 export const logout = (token) => {
-    return fetch(`${baseUrl}/users/logout`,{
-        headers: {
-            "X-Authorization":token
-        }
-    })
+
+    try {
+        return fetch(`${baseUrl}/users/logout`, {
+            headers: {
+                "X-Authorization": token
+            }
+        })
+
+    } catch (error) {
+        alert(error.message)
+    }
 }
-
-
-
-// export const getUser = () => {
-//     let username = sessionStorage.getItem('username');
-
-//     return username;
-// };
-
-// export const isAuthenticated = () => {
-//     return Boolean(getUser())
-// };

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { Link, useNavigate, useParams } from "react-router-dom"
+
 import { useAuthContext } from "../contexts/AuthContext"
 import * as gameService from "../services/gameService"
 import DeleteDialog from "./Common/DeleteDialog"
@@ -30,20 +31,16 @@ const GameDetails = () => {
             .then(result => {
                 navigate('/home')
             })
-
     }
 
     const onDeleteClickHandler = (event) => {
         event.preventDefault()
         setHandleDelete(true)
-
-
     }
 
     const handleDeleteFalse = () => {
         setHandleDelete(false)
         navigate(`/details/${game._id}`)
-
     }
 
     return (
@@ -51,9 +48,9 @@ const GameDetails = () => {
         <section id="game-details">
 
             {handleDelete
-                ? < DeleteDialog handleDeleteTrue={handleDeleteTrue} handleDeleteFalse={handleDeleteFalse} game={game}/>
-                : <> 
-                <h1>Game Details</h1>
+                ? < DeleteDialog handleDeleteTrue={handleDeleteTrue} handleDeleteFalse={handleDeleteFalse} game={game} />
+                : <>
+                    <h1>Game Details</h1>
                     {!game.hasOwnProperty("title")
                         ? <Loader />
                         : <div className="info-section">
@@ -69,18 +66,6 @@ const GameDetails = () => {
                                 {game.summary}
                             </p>
 
-                            {/* <div className="details-comments">
-                    <h2>Comments:</h2>
-                    <ul>
-                        <li className="comment">
-                            <p>Content: I rate this one quite highly.</p>
-                        </li>
-                        <li className="comment">
-                            <p>Content: The best game.</p>
-                        </li>
-                    </ul>
-                    <p className="no-comment">No comments.</p>
-                </div> */}
                             {isOwner
                                 && (
                                     <div className="buttons">
@@ -93,15 +78,6 @@ const GameDetails = () => {
                 </>
 
             }
-
-
-            {/* <article className="create-comment">
-                <label>Add new comment:</label>
-                <form className="form">
-                    <textarea name="comment" placeholder="Comment......"></textarea>
-                    <input className="btn submit" type="submit" defaultValue="Add Comment" />
-                </form>
-            </article> */}
 
         </section>
 

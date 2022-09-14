@@ -3,7 +3,6 @@ import { Link } from "react-router-dom"
 import { useAuthContext } from "../contexts/AuthContext"
 
 
-
 const Header = () => {
 
     const { isAuthenticated, user } = useAuthContext()
@@ -15,7 +14,6 @@ const Header = () => {
             <Link to="/create">Create Game</Link>
             <Link to="/logout">Logout</Link>
         </div>
-
     )
 
     let guestNavigation = (
@@ -24,18 +22,16 @@ const Header = () => {
             <Link to="/login">Login</Link>
             <Link to="/register">Register</Link>
         </div>
-
     )
 
     return (
         <header>
             <h1><Link className="home" to="/home">GamesLib</Link></h1>
             <nav>
-                
                 {isAuthenticated
-                ? userNavigation
-                : guestNavigation}
-                
+                    ? userNavigation
+                    : guestNavigation
+                }
             </nav>
         </header>
     )

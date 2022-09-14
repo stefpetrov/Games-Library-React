@@ -1,38 +1,36 @@
 import { useNavigate } from "react-router-dom"
+
 import { useAuthContext } from "../contexts/AuthContext"
 import * as gameService from "../services/gameService"
 
 const CreateGame = () => {
     const navigate = useNavigate()
-    const {user} = useAuthContext()
+    const { user } = useAuthContext()
 
     const onGameCreate = (event) => {
         event.preventDefault()
         const formData = new FormData(event.currentTarget)
 
-       let {title,category,maxLevel,imageUrl,summary} = Object.fromEntries(formData)
+        let { title, category, maxLevel, imageUrl, summary } = Object.fromEntries(formData)
 
-       const gameData = {
-        title,
-        category,
-        maxLevel,
-        imageUrl,
-        summary
-    }
+        const gameData = {
+            title,
+            category,
+            maxLevel,
+            imageUrl,
+            summary
+        }
 
-       if(title == '' || category == '' || maxLevel == '' || imageUrl == '' || summary == ''){
+        if (title == '' || category == '' || maxLevel == '' || imageUrl == '' || summary == '') {
+            return alert('All fields are required!')
 
-        return alert('All fields are required!')
-        
-       }
+        }
 
-       gameService.create(gameData,user.accessToken)
+        gameService.create(gameData, user.accessToken)
             .then(result => {
                 navigate('/home')
             })
-
     }
-
 
     return (
         <section id="create-page" className="auth">

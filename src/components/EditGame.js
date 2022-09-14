@@ -1,13 +1,13 @@
 import { useNavigate, useParams } from "react-router-dom"
+
 import useGameState from "../hooks/useGameState"
 import * as gameService from "../services/gameService"
 
 const EditGame = () => {
 
-    const {gameId} = useParams()
+    const { gameId } = useParams()
     const [game, setGame] = useGameState(gameId)
     const navigate = useNavigate()
-
 
     const onEditSubmitHandler = (event) => {
         event.preventDefault()
@@ -20,9 +20,9 @@ const EditGame = () => {
         const imageUrl = formData.get('imageUrl')
         const summary = formData.get('summary')
 
-        if(title == '' || category == '' || maxLevel == '' || imageUrl == '' || summary == ''){
+        if (title == '' || category == '' || maxLevel == '' || imageUrl == '' || summary == '') {
             return alert('All fields are required!')
-            
+
         }
 
         const gameData = {
@@ -33,12 +33,10 @@ const EditGame = () => {
             summary
         }
 
-        gameService.update(gameId,gameData)
-
+        gameService.update(gameId, gameData)
         navigate('/home')
 
     }
-
 
     return (
         <section id="edit-page" className="auth">
@@ -56,7 +54,7 @@ const EditGame = () => {
                     <input type="number" id="maxLevel" name="maxLevel" min="1" defaultValue={game.maxLevel} />
 
                     <label htmlFor="game-img">Image:</label>
-                    <input type="text" id="imageUrl" name="imageUrl" defaultValue={game.imageUrl}  />
+                    <input type="text" id="imageUrl" name="imageUrl" defaultValue={game.imageUrl} />
 
                     <label htmlFor="summary">Summary:</label>
                     <textarea name="summary" id="summary" defaultValue={game.summary}></textarea>
