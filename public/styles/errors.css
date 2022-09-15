@@ -4,3 +4,8 @@
     margin: 100px auto;
 
   }
+
+  .error-title {
+    color: lightcoral;
+    margin: auto;
+  }

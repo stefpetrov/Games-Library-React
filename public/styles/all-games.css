@@ -9,7 +9,7 @@
 }
 
 #catalog-page>h1 {
-    color: #fff;
+    color: whitesmoke;
     font-family: "Agency FB";
     font-size: 48px;
     font-weight: 700;
@@ -19,7 +19,7 @@
 }
 
 .allGames {
-    background-color: #fff;
+    background-color: whitesmoke;
     border-radius: 10px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
     display: flex;
@@ -56,22 +56,28 @@
 }
 
 .allGames-info>h2 {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 750;
-    color: #161618;
+    color: indianred
 }
 
 .details-button {
-    background-color: #2A265F;
+
+    background-color: #35334f;
+
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-    color: #fff;
-    font-size: 20px;
+    color: whitesmoke;
+    font-size: 15px;
     position: absolute;
     bottom: 30px;
     text-align: left;
     letter-spacing: 1px;
     padding: 10px;
     margin-top: auto;
-    margin-left: 20px;
-    border-radius: 12px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+.details-button:hover {
+    opacity:0.7 ;
 }

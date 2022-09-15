@@ -12,6 +12,7 @@ import Register from "./components/Authentication/Register";
 import { AuthProvider } from "./contexts/AuthContext";
 
 
+
 function App() {
   return (
     <AuthProvider>
@@ -29,11 +30,8 @@ function App() {
             <Route path="/details/:gameId" element={<GameDetails />} />
             <Route path="/edit/:gameId" element={<EditGame />} />
           </Routes>
-
         </main>
-
       </div>
-
     </AuthProvider>
   );
 }

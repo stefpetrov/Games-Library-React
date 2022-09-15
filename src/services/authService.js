@@ -39,7 +39,8 @@ export const register = async (email, password) => {
         }
 
     } catch (error) {
-        return alert(error)
+
+        throw error
 
     }
 

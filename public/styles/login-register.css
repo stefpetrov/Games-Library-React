@@ -28,6 +28,8 @@
     height: 100px;
     width: 100px;
     background: url("../images/icon-gamepad-2.png");
+    background-position: center;
+    background-repeat: no-repeat;
     margin: auto;
     border-radius: 50%;
     box-sizing: border-box;
@@ -103,8 +105,9 @@ label[for="terms"]>input {
     font-size: 26px;
     cursor: pointer;
     font-weight: 900;
-    box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
-    transition: 0.5s;
+    box-shadow: rgba(107, 105, 105, 0.506) 0px 4px 12px;
+    transition: 0.3s;
+
 }
 
 .btn.submit:hover {
@@ -124,7 +127,7 @@ label[for="terms"]>input {
     right: 8px;
     text-decoration: none;
     color: black;
-    background: rgb(235, 157, 142);
+    background:beige;
     border-radius: 10px;
     padding: 5px;
 }

@@ -50,6 +50,10 @@ a {
     font-weight: bold;
     color: inherit;
 }
+.field a {
+color: lightcoral;
+text-transform: capitalize;
+}
 
 blockquote {
     font-style: italic;

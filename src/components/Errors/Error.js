@@ -16,7 +16,7 @@ const Error = ({
             <div className="modal-dialog modal-confirm">
                 <div className="modal-content">
                     <div className="modal-header">
-                        <h4 className="modal-title">{message}</h4>
+                        <h4 className="error-title">{message} !</h4>
                         <button onClick={closeErrorHandler} type="button" className="close" data-dismiss="modal" aria-hidden="true">&#x2715;</button>
                     </div>
                 </div>

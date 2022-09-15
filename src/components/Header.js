@@ -26,7 +26,7 @@ const Header = () => {
 
     return (
         <header>
-            <h1><Link className="home" to="/home">GamesLib</Link></h1>
+            <h1><Link className="home" to="/home">gamesLib</Link></h1>
             <nav>
                 {isAuthenticated
                     ? userNavigation

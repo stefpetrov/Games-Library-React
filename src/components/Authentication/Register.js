@@ -1,12 +1,16 @@
+import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 
 import { useAuthContext } from "../../contexts/AuthContext"
 import * as authService from "../../services/authService"
+import Error from "../Errors/Error"
 
 const Register = () => {
 
     const { login } = useAuthContext()
     const navigate = useNavigate()
+    const [err, setErr] = useState({ isError: false, message: '' })
+
 
     const onRegisterHandler = (event) => {
         event.preventDefault()
@@ -17,7 +21,9 @@ const Register = () => {
         const repass = formData.get('confirm-password')
 
         if (password !== repass) {
-            return alert('passwords dont match')
+
+            return setErr({ isError: true, message: "Passwords don`t match" })
+
         }
 
         authService.register(email, password)
@@ -29,41 +35,38 @@ const Register = () => {
                 }
             })
             .catch(error => {
-                return alert(error)
-            })
+                setErr({ isError: true, message: error })
 
+            })
     }
 
-
-
-
-
-
-
     return (
-        <section id="register-page" className="content auth">
-            <form id="register" onSubmit={onRegisterHandler}>
-                <div className="container">
-                    <div className="brand-logo"></div>
-                    <h1>Register</h1>
+        err.isError
+            ? <Error message={err.message} setErr={setErr} />
+            :
+            <section id="register-page" className="content auth">
+                <form id="register" onSubmit={onRegisterHandler}>
+                    <div className="container">
+                        <div className="brand-logo"></div>
+                        <h1>Register</h1>
 
-                    <label htmlFor="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="maria@email.com" />
+                        <label htmlFor="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="example@email.com" />
 
-                    <label htmlFor="pass">Password:</label>
-                    <input type="password" name="password" id="register-password" />
+                        <label htmlFor="pass">Password:</label>
+                        <input type="password" name="password" id="register-password" />
 
-                    <label htmlFor="con-pass">Confirm Password:</label>
-                    <input type="password" name="confirm-password" id="confirm-password" />
+                        <label htmlFor="con-pass">Confirm Password:</label>
+                        <input type="password" name="confirm-password" id="confirm-password" />
 
-                    <input className="btn submit" type="submit" defaultValue="Register" />
+                        <input className="btn submit" type="submit" defaultValue="Register" />
 
-                    <p className="field">
-                        <span>If you already have profile click <Link to="/login">here</Link></span>
-                    </p>
-                </div>
-            </form>
-        </section>
+                        <p className="field">
+                            <span>If you already have profile click <Link to="/login">here</Link></span>
+                        </p>
+                    </div>
+                </form>
+            </section>
     )
 }
 
