@@ -37,8 +37,7 @@ const Login = () => {
     return (
         err.isError
             ? <Error message={err.message} setErr={setErr} />
-            :
-            <section id="login-page" className="auth">
+            : <section id="login-page" className="auth">
                 <form id="login" onSubmit={onLoginHandler} >
 
                     <div className="container">

@@ -43,8 +43,7 @@ const Register = () => {
     return (
         err.isError
             ? <Error message={err.message} setErr={setErr} />
-            :
-            <section id="register-page" className="content auth">
+            : <section id="register-page" className="content auth">
                 <form id="register" onSubmit={onRegisterHandler}>
                     <div className="container">
                         <div className="brand-logo"></div>
