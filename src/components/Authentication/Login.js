@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom"
 import { useAuthContext } from "../../contexts/AuthContext"
 import * as authService from "../../services/authService"
 import Error from "../Errors/Error"
+import Loader from "../Loader/Loader"
 
 
 const Login = () => {
@@ -24,6 +25,7 @@ const Login = () => {
         authService.login(email, password)
             .then(authData => {
                 login(authData);
+              
                 navigate('/home')
             })
             .catch(err => {
@@ -44,7 +46,7 @@ const Login = () => {
                         <div className="brand-logo"></div>
                         <h1>Login</h1>
                         <label htmlFor="email">Email:</label>
-                        <input type="email" id="email" name="email" placeholder="example@gmail.com" />
+                        <input type="email" id="email" name="email" placeholder="example@email.com" />
 
                         <label htmlFor="login-pass">Password:</label>
                         <input type="password" id="login-password" name="password" />
