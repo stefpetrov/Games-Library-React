@@ -71,8 +71,11 @@
     margin-right: 22px;
     height: 220px;
     border-radius: 50%;
-    box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
+     box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
 }
+
+
+
 
 .info-section>.text {
     margin-top: 30px;

@@ -1,11 +1,16 @@
+import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 import { useAuthContext } from "../contexts/AuthContext"
 import * as gameService from "../services/gameService"
+import Error from "./Errors/Error"
 
 const CreateGame = () => {
     const navigate = useNavigate()
     const { user } = useAuthContext()
+    const [err, setErr] = useState({ isError: false, message: '' })
+
+    
 
     const onGameCreate = (event) => {
         event.preventDefault()
@@ -22,7 +27,8 @@ const CreateGame = () => {
         }
 
         if (title == '' || category == '' || maxLevel == '' || imageUrl == '' || summary == '') {
-            return alert('All fields are required!')
+            return setErr({ isError: true, message: 'All fields are required' })
+
 
         }
 
@@ -33,12 +39,14 @@ const CreateGame = () => {
     }
 
     return (
-        <section id="create-page" className="auth">
+        err.isError
+        ? <Error message={err.message} setErr={setErr} />
+        : <section id="create-page" className="auth">
             <form id="create" onSubmit={onGameCreate}>
                 <div className="container">
 
                     <h1>Create Game</h1>
-                    <label htmlFor="leg-title">Legendary title:</label>
+                    <label htmlFor="leg-title">Game title:</label>
                     <input type="text" id="title" name="title" placeholder="Enter game title..." />
 
                     <label htmlFor="category">Category:</label>

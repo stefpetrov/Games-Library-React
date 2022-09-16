@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom"
 import { useAuthContext } from "../../contexts/AuthContext"
 import * as authService from "../../services/authService"
 import Error from "../Errors/Error"
-import Loader from "../Loader/Loader"
+
 
 
 const Login = () => {
