@@ -54,7 +54,7 @@ const GameDetails = () => {
                     <h1>Game Details</h1>
                     {!game.hasOwnProperty("title")
                         ? <Loader />
-                        : <div className="info-section">
+                        : <div className="info-section" >
 
                             <div className="game-header">
 
