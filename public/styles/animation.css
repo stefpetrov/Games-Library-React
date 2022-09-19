@@ -1,5 +1,5 @@
-.info-section, .auth, #catalog-page, #welcome-world{
-    animation-duration: 1s;
+.info-section, .auth, .allGames, #welcome-world{
+    animation-duration: 1.2s;
     animation-name: animation-basic;
 }
 
@@ -11,6 +11,15 @@
       to {
         transform: translateY(0%);
       }
+
+      from {
+        opacity: 0.2
+      }
+    
+      to {
+        opacity: 1;
+      }
+
     
 }
 
