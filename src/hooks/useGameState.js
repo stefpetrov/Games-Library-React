@@ -10,7 +10,7 @@ const useGameState = (gameId) => {
             .then(gameResult => {
                 setGame(gameResult);
             })
-    }, []);
+    }, [gameId]);
 
     return [
         game,

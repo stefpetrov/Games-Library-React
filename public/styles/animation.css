@@ -1,0 +1,35 @@
+.info-section, .auth, #catalog-page, #welcome-world{
+    animation-duration: 1s;
+    animation-name: animation-basic;
+}
+
+@keyframes animation-basic {
+    from {
+        transform: translateY(100%);
+      }
+    
+      to {
+        transform: translateY(0%);
+      }
+    
+}
+
+.modal-error, .modal {
+    animation-duration: 0.5s;
+    animation-name: animation-errors;
+
+}
+
+@keyframes animation-errors {
+    from {
+        transform: translateX(100%);
+      }
+    
+      to {
+        transform: translateX(0%);
+
+      }
+    
+}
+
+
