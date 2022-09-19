@@ -22,7 +22,7 @@ function App() {
         <Header />
         <main id="site-content">
           <Routes>
-            <Route path="/Games-Library-React" element={<HomePage />} />
+            <Route path="/Games-Library-React/" element={<HomePage />} />
             <Route path="/home" element={<HomePage />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
