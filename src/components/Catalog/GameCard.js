@@ -7,7 +7,8 @@ const GameCard = ({
     return (
         <div className="allGames">
             <div className="allGames-info">
-                <img src={game.imageUrl} />
+                {console.log(game)}
+                <img src={"/Games-Library-React" + game.imageUrl} />
                 <h2>{game.title}</h2>
                 <h6>{game.category}</h6>
                 <Link to={`/details/${game._id}`} className="details-button">Details</Link>

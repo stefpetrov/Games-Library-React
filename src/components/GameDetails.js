@@ -58,7 +58,7 @@ const GameDetails = () => {
 
                             <div className="game-header">
 
-                                <img className="game-img" src={game.imageUrl} />
+                                <img className="game-img" src={"/Games-Library-React" + game.imageUrl} />
 
 
                                 <h1>{game.title}</h1>
