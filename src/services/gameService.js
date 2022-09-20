@@ -1,6 +1,6 @@
 import * as request from './requester';
 
-const baseUrl = 'http://localhost:3030/data';
+const baseUrl = 'https://softuni-practice-api.herokuapp.com/data';
 
 export const getAll = () => request.get(`${baseUrl}/games?sortBy=_createdOn%20desc`);
 
