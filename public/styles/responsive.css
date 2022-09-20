@@ -1,0 +1,114 @@
+
+@media screen and (max-width:470px) {
+
+
+    #box{
+        max-width: 100%;
+        /* padding-left: 50px;
+        padding-right: 50px; */
+        box-sizing: border-box;
+    }
+    header{
+        height: 80px
+
+    }
+
+   header h1{
+        display: block;
+        text-align: center;
+        font-size: 25px;
+        color: bisque;
+    }
+    h2 {
+        display: none;
+    }
+    h3 {
+        display: none;
+    }
+    #home-page > h1 {
+        font-size: 30px;
+    }
+
+    #welcome-world > img {
+        display: none;
+    }
+
+    div.rating {
+        display: none;
+    }
+
+    div.image-wrap {
+        width:100px;
+        height:100px
+    }
+    .game {
+        height: 250px;
+        width: 100%
+    }
+
+    .details-btn {
+
+        font-size: 0.8rem;
+    }
+
+    .welcome-message{
+      display:none
+    }
+
+    #user > a {
+        display:inline-block;
+        font-size: 15px;
+        text-align: center;
+
+    }
+    #guest > a {
+        display: inline-block;
+        font-size: 15px;
+        text-align: center;
+
+    }
+    nav {
+    width: inherit;
+
+    }
+
+
+}
+
+
+/*     
+    header nav > ul li{
+        width: 100%;
+        display: block;
+        float: none;
+    }
+    header nav{
+        height: auto;
+    }
+
+    main section > div > div{
+        float: none;
+        margin-right: 0;
+        display: block;
+        text-align: center;
+        background-color: lightgreen;
+
+    }
+    main section > div article > h3{
+        text-align: center;
+    }
+    main section > div > div img{
+        padding-bottom: 0;
+
+    }
+    main > aside > article > h2{
+        text-align: center;
+    }
+    main > aside > article > h1{
+        text-align: center;
+    }
+   
+    header p {
+        font-size: 20px;
+    }
+   
