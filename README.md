@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## To start the server:
+## To start  server:
 
 Move to server directory (in Terminal run `cd server`), then run:
 ### `node server.js`
