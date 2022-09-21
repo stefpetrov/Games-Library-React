@@ -1,6 +1,6 @@
 ##  Desktop Web App Live demo at:
 
-https://stefpetrov.github.io/Games-Library-React/
+https://stefpetrov.github.io/Games-Library-React
 
 I am currently working on Responsive design...
 
