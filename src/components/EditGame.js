@@ -64,7 +64,7 @@ const EditGame = () => {
                         <label htmlFor="levels">MaxLevel:</label>
                         <input type="number" id="maxLevel" name="maxLevel" min="1" defaultValue={game.maxLevel} />
 
-                        <label htmlFor="game-img">Image:</label>
+                        <label htmlFor="game-img">Image URL:</label>
                         <input type="text" id="imageUrl" name="imageUrl" defaultValue={game.imageUrl} />
 
                         <label htmlFor="summary">Summary:</label>

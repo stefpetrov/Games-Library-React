@@ -1,35 +1,44 @@
-
 @media screen and (max-width:470px) {
 
 
-    #box{
+    #box {
         max-width: 100%;
-        /* padding-left: 50px;
-        padding-right: 50px; */
         box-sizing: border-box;
+        margin: 0 auto;
     }
-    header{
+
+    #welcome-world {
+        padding-top: 3em;
+    }
+
+    header {
         height: 80px
-
     }
 
-   header h1{
+    header h1 {
         display: block;
         text-align: center;
         font-size: 25px;
         color: bisque;
     }
+    .welcome-message > h3{
+        display: none;
+    }
+
     h2 {
         display: none;
     }
-    h3 {
-        display: none;
+
+    .game h3 {
+        display: block;
+        font-size: 15px;
     }
-    #home-page > h1 {
+
+    #home-page>h1 {
         font-size: 30px;
     }
 
-    #welcome-world > img {
+    #welcome-world>img {
         display: none;
     }
 
@@ -37,78 +46,186 @@
         display: none;
     }
 
-    div.image-wrap {
-        width:100px;
-        height:100px
-    }
+
     .game {
         height: 250px;
-        width: 100%
+        width: 100%;
+        padding: 20px;
+        
     }
 
     .details-btn {
-
+        margin: 0 auto;
         font-size: 0.8rem;
-    }
-
-    .welcome-message{
-      display:none
-    }
-
-    #user > a {
-        display:inline-block;
-        font-size: 15px;
-        text-align: center;
 
     }
-    #guest > a {
+
+    .welcome-message {
+        display: none
+    }
+
+    #user>a {
         display: inline-block;
         font-size: 15px;
         text-align: center;
 
     }
-    nav {
-    width: inherit;
+
+    #guest>a {
+        display: inline-block;
+        font-size: 15px;
+        text-align: center;
 
     }
+
+    nav {
+        width: inherit;
+
+    }
+
+    div.image-wrap {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+    }
+
+    .data-buttons {
+        font-size: 0.8rem;
+
+    }
+
+    #guest,
+    #user {
+        margin-left: 20%;
+    }
+
+    #login-page,
+    #register-page,
+    #create-page,
+    #edit-page {
+        max-width: fit-content;
+        width: 100%;
+    }
+
+    .field>span {
+        display: none;
+    }
+
+    label {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    #register>div>h1 {
+
+        font-size: 1.9rem;
+
+    }
+
+    #create > div > h1 {
+        font-size: 1.9rem;
+
+    }
+
+    #login>div>h1 {
+
+        font-size: 1.9rem;
+
+    }
+
+    #email,#category, #title, #maxLevel, #imageUrl, #summary{
+
+        font-size: 15px;
+    }
+
+  
+
+    #catalog-page {
+
+        width: 100%;
+        margin-top: 10%;
+    }
+
+    #catalog-page > section > div > div > h2 {
+        display: block;
+        text-align: center;
+    }
+
+    .allGames-info {
+        padding: 0;
+    }
+
+    .allGames-info>img {
+      display: block;
+      width: 50%;
+      height: 50%;
+        margin-top: 20%;
+    }
+
+    .allGames-info>h6 {
+       display: none;
+    }
+
+    .details-button {
+        margin: 0;
+        text-align: center;
+
+    }
+
+    .image-wrap>img {
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+    }
+
+    .modal-error {
+        width: 100%;
+
+
+    }
+
+    .modal-confirm h4 {
+        font-size: 15px;
+    }
+
+    #game-details {
+        width: 100%
+    }
+
+    .info-section>.text {
+        padding: 5%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+
+        font-size: 12px;
+        
+        
+    }
+
+    .game-img {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .button {
+        font-size: 15px;
+    }
+
+    .container>h1{
+        font-size: 1.9rem;
+    }
+
+    .modal-confirm .btn-info {
+        margin: 5px;
+    }
+
+
 
 
 }
 
 
-/*     
-    header nav > ul li{
-        width: 100%;
-        display: block;
-        float: none;
-    }
-    header nav{
-        height: auto;
-    }
 
-    main section > div > div{
-        float: none;
-        margin-right: 0;
-        display: block;
-        text-align: center;
-        background-color: lightgreen;
-
-    }
-    main section > div article > h3{
-        text-align: center;
-    }
-    main section > div > div img{
-        padding-bottom: 0;
-
-    }
-    main > aside > article > h2{
-        text-align: center;
-    }
-    main > aside > article > h1{
-        text-align: center;
-    }
-   
-    header p {
-        font-size: 20px;
-    }
+    
    

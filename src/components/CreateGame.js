@@ -55,7 +55,7 @@ const CreateGame = () => {
                     <label htmlFor="levels">MaxLevel:</label>
                     <input type="number" id="maxLevel" name="maxLevel" min="1" placeholder="1" />
 
-                    <label htmlFor="game-img">Image:</label>
+                    <label htmlFor="game-img">Image URL:</label>
                     <input type="text" id="imageUrl" name="imageUrl" placeholder="Upload a photo..." />
 
                     <label htmlFor="summary">Summary:</label>
