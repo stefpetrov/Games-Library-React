@@ -7,7 +7,7 @@ const GameCard = ({
     return (
         <div className="game">
             <div className="image-wrap">
-                <img src={"/Games-Library-React" + game.imageUrl} />
+                <img src={game.imageUrl} />
             </div>
             <h3>{game.title}</h3>
             <div className="rating">
