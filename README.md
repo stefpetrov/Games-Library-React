@@ -1,4 +1,4 @@
-##  Desktop Web App Live demo at:
+## App Live demo at:
 
 https://stefpetrov.github.io/Games-Library-React
 
