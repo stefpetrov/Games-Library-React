@@ -5,7 +5,7 @@ https://stefpetrov.github.io/Games-Library-React
 I am currently working on Responsive design...
 
 
-## Screenshots of the project:
+## Screenshots of the project on Desktop:
 
 ![Home](public/screenshots/Home.jpg)
 ![Catalog](public/screenshots/Catalog.jpg)
@@ -14,6 +14,19 @@ I am currently working on Responsive design...
 ![Details](public/screenshots/Game%20details.jpg)
 ![Login](public/screenshots/Login%20Page.jpg)
 ![Register](public/screenshots/Register%20Page.jpg)
+
+## Screenshots of the project on Mobile:
+
+![Catalog](public/screenshots/catalog-mobile.jpg)
+![Catalog](public/screenshots/catalog-mobile2.jpg)
+![Catalog](public/screenshots/catalog-mobile3.jpg)
+![Home](public/screenshots/home-mobile.jpg)
+![Home](public/screenshots/home2-mobile.jpg)
+![Details](public/screenshots/details-mobile.jpg)
+![Login](public/screenshots/login-mobile.jpg)
+
+
+
 
 ## How to run the app on your computer:
 
