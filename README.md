@@ -2,8 +2,6 @@
 
 https://stefpetrov.github.io/Games-Library-React
 
-I am currently working on Responsive design...
-
 
 ## Screenshots of the project on Desktop:
 
